@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "vitest --passWithNoTests",
+    "coverage": "vitest run --coverage"
   },
   "husky": {
     "hooks": {
@@ -34,7 +36,12 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2"
+    "jsdom": "^22.0.0",
+    "lint-staged": "^13.2.2",
+    "vitest": "^0.31.1"
   }
 }
