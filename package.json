@@ -9,6 +9,17 @@
     "lint": "next lint",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
+    ]
+  },
   "dependencies": {
     "@types/node": "20.2.1",
     "@types/react": "18.2.6",
@@ -23,6 +34,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2"
   }
 }
